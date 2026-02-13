@@ -3,7 +3,7 @@ public class array {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String []namaMK = {"Pancasila", "Konsep Teknologi Informasi", "Critical Thinking and Problem Solving", "Matematika Dasar", "Bahasa Inggris", "Dasar Pemrograman", "Praktikum Dasar Pemrograman", "Keselamatan dan Kesehatan Kerja","Fisika"};
-        int [] sks = {2,4,4,6,4,4,6,4,2};
+        int [] sks = {2,2,2,3,2,2,3,2,2};
         int jumlahMK = namaMK.length;
         int totalSKS = 0;
         double totalBobot = 0;
