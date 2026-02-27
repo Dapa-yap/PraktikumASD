@@ -2,7 +2,9 @@ import java.util.Scanner;
 public class mataKuliahDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        mataKuliah [] arrayOfMatakuliah = new mataKuliah[3];
+        System.out.print("Masukkan jumlah mata kuliah: ");
+        int jumlah = Integer.parseInt(sc.nextLine());
+        mataKuliah[] arrayOfMatakuliah = new mataKuliah[jumlah];
 
 
         for (int i = 0; i < arrayOfMatakuliah.length; i++) {

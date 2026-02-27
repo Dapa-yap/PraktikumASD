@@ -26,4 +26,10 @@ public class mataKuliah {
         System.out.print("Jumlah Jam : ");
         this.jumlahJam = Integer.parseInt(sc.nextLine());
     }
+    void cetakInfo(){
+        System.out.println("Kode       : " + kode);
+        System.out.println("Nama       : " + nama);
+        System.out.println("SKS        : " + sks);
+        System.out.println("Jumlah Jam : " + jumlahJam);
+    }
 }
