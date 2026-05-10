@@ -60,5 +60,8 @@ public class Stacktugasmahasiswa10 {
         System.out.println("Stack kosong! Tidak ada tugas yang dikumpulkan");
         return null;
     }
-}
+    }
+    public int JumlahTugas() {
+    return top + 1;
+    }
 }
