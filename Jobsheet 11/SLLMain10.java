@@ -1,18 +1,46 @@
-public class SLLMain10 {
+import java.util.Scanner;
+public class SLLMain10 { 
     public static void main(String[] args) {
-        SingleLinkedList10 sll = new SingleLinkedList10();
-        Mahasiswa10 mhs1 = new Mahasiswa10("111", "Andi", "1A", 3.8);
-        Mahasiswa10 mhs2 = new Mahasiswa10("112", "Budi", "1B", 3.5);
-        Mahasiswa10 mhs3 = new Mahasiswa10("113", "Cita", "1A", 3.9);
-        Mahasiswa10 mhs4 = new Mahasiswa10("114", "Doni", "1C", 3.7);
-
-        sll.print();
-        sll.addFirst(mhs4);
-        sll.print();
-        sll.addFirst(mhs1);
-        sll.print();
-        sll.insertAfter("Andi", mhs3);
-        sll.insertAt(2, mhs2);
-        sll.print();
+        SingleLinkedList10 sll = new SingleLinkedList10(); 
+        Scanner sc = new Scanner(System.in);
+        int pilihan = 0;
+        do {
+            System.out.println("=================================");
+            System.out.println("  MENU SINGLE LINKED LIST MHS    ");
+            System.out.println("=================================");
+            System.out.println("1. Tambah Data di Awal (addFirst)");
+            System.out.println("2. Tambah Data di Akhir (addLast)");
+            System.out.println("3. Cetak Data (print)");
+            System.out.println("4. Keluar");
+            System.out.print("Pilih menu (1-4): ");
+            pilihan = sc.nextInt();
+            sc.nextLine(); 
+            System.out.println("---------------------------------");
+            if (pilihan == 1 || pilihan == 2) {
+                System.out.print("Masukkan NIM: ");
+                String nim = sc.nextLine(); 
+                System.out.print("Masukkan Nama: ");
+                String nama = sc.nextLine();
+                System.out.print("Masukkan Kelas: ");
+                String kelas = sc.nextLine();
+                System.out.print("Masukkan IPK: ");
+                double ipk = sc.nextDouble();
+                sc.nextLine(); 
+                Mahasiswa10 mhsBaru = new Mahasiswa10(nim, nama, kelas, ipk);
+                if (pilihan == 1) {
+                    sll.addFirst(mhsBaru);
+                    System.out.println("-> Data berhasil ditambahkan di AWAL!\n");
+                } else {
+                    sll.addLast(mhsBaru);
+                    System.out.println("-> Data berhasil ditambahkan di AKHIR!\n");
+                }
+            } else if (pilihan == 3) {
+                sll.print();
+            } else if (pilihan == 4) {
+                System.out.println("Terima kasih! Program selesai.");
+            } else {
+                System.out.println("Pilihan tidak valid. Silakan coba lagi.\n");
+            }
+        } while (pilihan != 4);
     }
 }
