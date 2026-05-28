@@ -35,10 +35,10 @@ public class DoubleLinkedListMain {
                     list.insertAfter(keyNim, dataBaru);
                     break;
                 case 4:
-                    //list.removeFirst();
+                    list.removeFirst();
                     break;
                 case 5:
-                    //list.removeLast();
+                    list.removeLast();
                     break;
                 case 6:
                     list.print();
